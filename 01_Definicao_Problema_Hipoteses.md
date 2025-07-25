@@ -1,20 +1,58 @@
 # Projeto: Análise de Vendas de E-commerce
 
-## 1. Problema de Negócio Principal
+
+
+## Problema de Negócio Principal
+
+
 
 Como podemos aumentar as vendas e a rentabilidade do nosso e-commerce?
 
-## 2. Perguntas de Negócio para Análise
 
-Com base no problema principal e nos dados disponíveis, buscaremos responder às seguintes perguntas:
 
-1.  Quais são os produtos de maior e menor desempenho em termos de receita total e quantidade vendida?
-2.  Qual o perfil dos nossos clientes mais valiosos (maiores compradores) e como eles contribuem para a receita geral?
-3.  Há padrões de compra geográfica ou sazonalidade nas vendas que possamos explorar para otimizar campanhas ou estoque?
+## Perguntas de Negócio para Análise
 
-## 3. Hipóteses de Negócio a Serem Testadas
+
+
+Com o problema em mãos e os dados que temos, queremos descobrir:
+
+
+
+1. Quais produtos estão vendendo mais (e menos)?
+
+Quem são os "campeões de venda" em faturamento e quantidade?
+
+E quais produtos estão ficando para trás? Será que precisamos repensar algo?
+
+
+
+2\. Quem são nossos clientes mais valiosos?
+
+Quem compra mais e gera mais receita?
+
+O que esses clientes têm em comum? Como podemos manter esse relacionamento (ou até atrair outros parecidos)?
+
+
+
+3\. Tem alguma tendência por região ou época do ano?
+
+Será que vendemos mais em certas cidades ou estados?
+
+Tem épocas específicas em que as vendas disparam (ou caem)? Isso pode nos ajudar a planejar promoções e estoque.
+
+
+
+## Hipóteses de Negócio a Serem Testadas
+
+
 
 As seguintes hipóteses serão testadas com os dados para guiar a análise e potenciais ações:
 
-1.  Uma pequena porcentagem dos nossos clientes (clientes 'VIP') é responsável pela maior parte da nossa receita total, e identificar esses clientes é crucial para programas de fidelidade.
-2.  As vendas demonstram uma forte sazonalidade, com picos significativos em meses próximos a datas comemorativas (ex: final de ano), exigindo planejamento de estoque e marketing para esses períodos.
+
+
+1. Uma pequena porcentagem dos nossos clientes (clientes 'VIP') é responsável pela maior parte da nossa receita total, e identificar esses clientes é muito importante para a criação de programas de fidelidade.
+
+2\. As vendas demonstram altas e baixas a depender da época do ano, com picos significativos em meses próximos a datas comemorativas (ex: final de ano), exigindo planejamento de estoque e marketing para esses momentos.
+
+
+
