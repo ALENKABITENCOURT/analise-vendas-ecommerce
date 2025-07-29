@@ -30,15 +30,11 @@ E quais produtos estão ficando para trás? Será que precisamos repensar algo?
 
 Quem compra mais e gera mais receita?
 
-O que esses clientes têm em comum? Como podemos manter esse relacionamento (ou até atrair outros parecidos)?
 
 
 
-3\. Tem alguma tendência por região ou época do ano?
 
-Será que vendemos mais em certas cidades ou estados?
-
-Tem épocas específicas em que as vendas disparam (ou caem)? Isso pode nos ajudar a planejar promoções e estoque.
+3\. Tem épocas específicas em que as vendas disparam (ou caem)? Isso pode nos ajudar a planejar promoções e estoque.
 
 
 
@@ -53,6 +49,4 @@ As seguintes hipóteses serão testadas com os dados para guiar a análise e pot
 1. Uma pequena porcentagem dos nossos clientes (clientes 'VIP') é responsável pela maior parte da nossa receita total, e identificar esses clientes é muito importante para a criação de programas de fidelidade.
 
 2\. As vendas demonstram altas e baixas a depender da época do ano, com picos significativos em meses próximos a datas comemorativas (ex: final de ano), exigindo planejamento de estoque e marketing para esses momentos.
-
-
 
