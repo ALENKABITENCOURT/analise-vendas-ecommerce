@@ -50,11 +50,15 @@ AND
 
 SELECT COUNT(*) FROM online_retail_clean;
 
+``` 
+
 ![397millinhas](Print_397_mil_linhas.png)
 
 Identificação dos Clientes VIP
 
 Com os dados devidamente limpos, o próximo passo consistiu em identificar os clientes que mais contribuem para a receita. Para isso, ranqueamos os clientes com base no seu valor total de compra.
+
+```sql
 
 WITH receita_total AS (
     SELECT SUM(Quantity * UnitPrice) AS total_receita
@@ -89,6 +93,8 @@ FROM clientes_ordenados
 ORDER BY rank_cliente
 LIMIT 10;
 
+```
+
 ![RankingClientes](Ranking_clientes.png)
 
 Os resultados desta análise confirmam de forma contundente nossa hipótese inicial e demonstram uma clara aderência ao Princípio de Pareto (ou Regra 80/20). Observamos que:
@@ -101,6 +107,8 @@ Perfis de Compra dos Clientes VIP
 
 Para aprofundar a compreensão sobre o comportamento dos nossos Clientes VIP, investigamos se eles tendem a realizar compras de alta frequência (muitas transações de menor valor) ou de alto valor por compra (poucas transações de grande valor). A consulta a seguir analisa o número de compras e o ticket médio dos cinco clientes com maior receita.
 
+```sql
+
 SELECT
     CustomerID AS ID_Cliente,
     COUNT(DISTINCT InvoiceNo) AS NumeroDeCompras,
@@ -110,6 +118,8 @@ FROM online_retail_clean
 WHERE CustomerID IN ('14646', '18102', '17450', '16446', '14911') -- Apenas os top 5
 GROUP BY ID_Cliente
 ORDER BY ValorTotalDeCompra DESC;
+
+```
 
 ![ClientesdemaiorReceita](número_de_compras_e_o_ticket_médio_dos_cinco_clientes_com_maior_receita.png)
 
@@ -134,6 +144,8 @@ Tratamento e Análise da Sazonalidade Geral
 
 Para investigar as tendências sazonais, o primeiro desafio foi padronizar o formato da coluna InvoiceDate, que apresentava diversas variações. Após o tratamento, pudemos agregar a receita por mês/ano e identificar os períodos de maior e menor movimento.
 A consulta a seguir foi utilizada para extrair o mês e o ano da InvoiceDate e calcular a receita total mensal:
+
+```sql
 
 WITH cleaned_dates AS (
     SELECT
@@ -174,6 +186,8 @@ GROUP BY
 ORDER BY
     receita_total DESC;
 
+```
+
 ![InvoiceDate](extraindo_mês_e_ano_da_InvoiceDate.png)
 
 Resultados e Análise da Sazonalidade:
@@ -184,6 +198,8 @@ Os resultados da análise de receita mensal revelam uma clara tendência de sazo
 •	A tendência clara é que a receita se mantém em um nível mais baixo no início do ano e acelera significativamente a partir de Setembro, atingindo seu ponto máximo em Novembro e Dezembro.
 Sazonalidade por País (Exemplo: Reino Unido)
 Uma análise mais aprofundada por país, como para o Reino Unido (que representa a maior parte das vendas), também reforça essa tendência, identificando os meses de maior e menor lucratividade.
+
+```sql
 
 WITH cleaned_dates AS (
     SELECT
@@ -234,6 +250,8 @@ ORDER BY
     receita_total DESC,
     Country;
 
+```
+
 ![PaíseseMesesdemaiorlucratividade](meses_de_maior_e_menor_lucratividade.png)
 
 
@@ -251,6 +269,8 @@ Hipótese 3: Oportunidades de Venda Cruzada e Produtos Complementares
 Nossa terceira hipótese busca identificar quais produtos os clientes mais valiosos (VIPs) tendem a comprar juntos, especialmente durante os meses de alta temporada. O objetivo é descobrir oportunidades de venda cruzada (cross-selling) e de criação de kits promocionais que possam aumentar o ticket médio e a rentabilidade do e-commerce.
 Produtos de Alto Desempenho entre Clientes VIP na Alta Temporada
 Para iniciar esta análise, investigamos quais produtos geram mais receita entre os clientes VIP nos meses de alta temporada (Outubro, Novembro e Dezembro). Esta etapa nos ajuda a entender quais itens são os "carros-chefe" desse segmento valioso.
+
+```sql
 
 WITH receita_por_cliente AS (
     SELECT
@@ -307,6 +327,8 @@ GROUP BY
 ORDER BY
     receita_alta_temporada DESC;
 
+```
+
 ![ReceitaAltaTemporada](carro_chefe_de_produtos.png)
 
 Resultados:
@@ -317,6 +339,8 @@ Esses achados são cruciais para priorizar o estoque desses itens, garantindo qu
 Identificação de Combinações de Produtos para Venda Cruzada
 
 O próximo passo foi identificar quais produtos os clientes VIP compram juntos, especialmente durante a alta temporada. Esta etapa é fundamental para revelar oportunidades diretas de venda cruzada e de formação de conjuntos de produtos.
+
+```sql
 
 WITH receita_por_cliente AS (
     SELECT
@@ -387,6 +411,8 @@ GROUP BY
     t2.Description
 ORDER BY
     frequencia_de_compra_conjunta DESC;
+
+```
 
 ![VendasCruzadas](vendas_cruzadas.png)
 
