@@ -98,9 +98,12 @@ LIMIT 10;
 ![RankingClientes](Ranking_clientes.png)
 
 Os resultados desta análise confirmam de forma contundente nossa hipótese inicial e demonstram uma clara aderência ao Princípio de Pareto (ou Regra 80/20). Observamos que:
+
 •	Uma porcentagem muito pequena de clientes é, de fato, responsável por uma fatia desproporcionalmente grande da receita.
 •	Identificamos, por exemplo, que apenas 0,48% dos clientes (referente ao rank 21 da nossa análise completa, não limitada a 10) já contribuem com 24,35% da receita total.
+
 •	Expandindo essa análise, verificamos que apenas 4,6% dos clientes geram quase metade da receita do e-commerce. Ao considerarmos os 200 clientes mais valiosos (rank 200), a receita acumulada atinge impressionantes 49,23% do total.
+
 O cliente de ID 14646 se destaca como o principal VIP, gerando sozinho mais de R$ 280 mil em receita. Embora a maioria dos Clientes VIP seja do Reino Unido, a presença de clientes da Holanda (como o próprio 14646), Irlanda e Austrália indica que o alto valor não se limita apenas ao mercado doméstico. O que esses clientes têm em comum não é a localização geográfica, mas sim uma notável disposição para gastar e o valor substancial que agregam ao negócio.
 
 Perfis de Compra dos Clientes VIP
@@ -124,16 +127,24 @@ ORDER BY ValorTotalDeCompra DESC;
 ![ClientesdemaiorReceita](número_de_compras_e_o_ticket_médio_dos_cinco_clientes_com_maior_receita.png)
 
 Essa análise revela dois perfis distintos entre os Clientes VIP:
+
 •	Clientes de Alto Valor e Frequência Moderada: O cliente de ID 14646, por exemplo, registrou a segunda maior quantidade de compras (73), mas seu valor total de compra é o maior, o que sugere que ele adquire predominantemente itens de valor mais elevado.
+
 •	Clientes de Alta Frequência e Valor por Compra Menor: O cliente de ID 14911 apresenta a maior quantidade de compras (201), porém com uma receita total menor em comparação aos outros VIPs, indicando que suas aquisições são de itens com valor unitário mais baixo.
 Ambos os perfis são extremamente valiosos para o e-commerce, demonstrando alta fidelidade e merecendo estratégias de valorização e retenção.
 
 Recomendações de Negócio para Clientes VIP
+
 Com base nesses insights, diversas ações estratégicas podem ser implementadas para maximizar o relacionamento e a receita gerada pelos Clientes VIP:
+
 •	Programas de Fidelidade Exclusivos: Desenvolver programas de recompensa específicos que ofereçam benefícios, reconhecimento diferenciado e acesso a produtos ou eventos especiais.
+
 •	Comunicação Personalizada: Criar campanhas de e-mail marketing e ofertas exclusivas que considerem os perfis de compra (itens de alto valor vs. alta frequência) e os produtos que esses clientes já demonstraram preferência.
+
 •	Atendimento ao Cliente Prioritário: Oferecer canais de suporte dedicados ou tempos de resposta mais rápidos para esses clientes, reforçando a percepção de valor e exclusividade.
+
 •	Marketing Segmentado: Direcionar esforços de marketing para produtos e promoções que estejam alinhados com o histórico de compra e o perfil de cada grupo VIP.
+
 •	Investigação da Origem dos Clientes Não Identificados: O time de negócios deve investigar proativamente o motivo pelo qual 132 mil transações não possuem CustomerID atribuído. Implementar soluções para identificar esses compradores no momento da compra é crucial para expandir a base de clientes passíveis de análise, relacionamento e, futuramente, mensurar a satisfação (NPS - Net Promoter Score).
 
 Hipótese 2: Sazonalidade das Vendas
@@ -193,10 +204,15 @@ ORDER BY
 Resultados e Análise da Sazonalidade:
 
 Os resultados da análise de receita mensal revelam uma clara tendência de sazonalidade:
+
 •	Observa-se um pico de vendas muito forte nos últimos meses de 2011.
+
 •	O mês mais lucrativo foi Novembro de 2011, registrando uma receita total de R$ 345.332,09.
+
 •	A tendência clara é que a receita se mantém em um nível mais baixo no início do ano e acelera significativamente a partir de Setembro, atingindo seu ponto máximo em Novembro e Dezembro.
+
 Sazonalidade por País (Exemplo: Reino Unido)
+
 Uma análise mais aprofundada por país, como para o Reino Unido (que representa a maior parte das vendas), também reforça essa tendência, identificando os meses de maior e menor lucratividade.
 
 ```sql
@@ -260,14 +276,20 @@ Para o Reino Unido, por exemplo, os meses mais rentáveis são Novembro, Setembr
 Recomendações de Negócio para a Sazonalidade
 
 Com base nessas tendências sazonais, as seguintes ações podem ser propostas:
+
 •	Intensificar Campanhas de Marketing: Fortalecer e lançar novas campanhas para os meses de alta temporada (Setembro a Dezembro), capitalizando em períodos de grande consumo e preparativos para o Natal e Ano Novo.
+
 •	Gestão de Estoque Otimizada: Ajustar os níveis de estoque para garantir que os produtos de alta demanda estejam disponíveis em abundância nos meses de pico, minimizando rupturas de estoque e perdas de vendas.
+
 •	Estratégias para Baixa Temporada: Desenvolver campanhas específicas e promoções atrativas para os meses de menor receita (como Janeiro, Fevereiro e Abril), aproveitando datas comemorativas menores ou eventos locais para estimular as vendas.
+
 
 Hipótese 3: Oportunidades de Venda Cruzada e Produtos Complementares
 
 Nossa terceira hipótese busca identificar quais produtos os clientes mais valiosos (VIPs) tendem a comprar juntos, especialmente durante os meses de alta temporada. O objetivo é descobrir oportunidades de venda cruzada (cross-selling) e de criação de kits promocionais que possam aumentar o ticket médio e a rentabilidade do e-commerce.
+
 Produtos de Alto Desempenho entre Clientes VIP na Alta Temporada
+
 Para iniciar esta análise, investigamos quais produtos geram mais receita entre os clientes VIP nos meses de alta temporada (Outubro, Novembro e Dezembro). Esta etapa nos ajuda a entender quais itens são os "carros-chefe" desse segmento valioso.
 
 ```sql
@@ -334,6 +356,7 @@ ORDER BY
 Resultados:
 
 A análise revelou que o item PICNIC BASKET WICKER 60 PIECES é o principal motor de receita entre os clientes VIP durante a alta temporada, destacando-se significativamente dos demais produtos com uma receita de R$ 39.619,50. Outros itens de alto desempenho incluem WHITE HANGING HEART T-LIGHT HOLDER, REGENCY CAKESTAND 3 TIER e FAIRY CAKE FLANNEL ASSORTED COLOUR, que são predominantemente itens de casa, cozinha e festa.
+
 Esses achados são cruciais para priorizar o estoque desses itens, garantindo que eles nunca fiquem em falta, especialmente nos meses de maior demanda, maximizando as oportunidades de venda.
 
 Identificação de Combinações de Produtos para Venda Cruzada
@@ -419,32 +442,59 @@ ORDER BY
 Resultados e Insights:
 
 Esta análise de associação de produtos revela padrões de compra valiosos:
+
 •	Coleções Completas: O REGENCY CAKESTAND 3 TIER frequentemente aparece associado a itens como REGENCY TEA PLATE ROSES e REGENCY TEAPOT ROSES. Isso indica que os clientes VIP buscam completar coleções, sugerindo uma excelente oportunidade para oferecer pacotes promocionais contendo esses conjuntos.
+
 •	Kits para Eventos: A combinação do REGENCY CAKESTAND 3 TIER com JUMBO BAG RED RETROSPOT e PARTY BUNTING sugere que esses clientes estão organizando eventos ou festas. A criação de "kits festa" pré-montados ou temáticos poderia ser muito atrativa para esse perfil.
+
 •	Produtos Autossuficientes: Curiosamente, o PICNIC BASKET WICKER 60 PIECES não aparece com alta frequência em combinações de venda cruzada significativas (exceto com o "SMALL" correspondente). Isso reforça o insight de que ele é um item de alto valor que, por si só, é um grande motor de receita e, portanto, não necessita de complementos para ser vendido. Ele gera alto valor individualmente, e sua disponibilidade deve ser prioritária.
+
 Recomendações de Negócio para Venda Cruzada
+
 Com base nessas descobertas, as seguintes recomendações podem ser implementadas para impulsionar as vendas cruzadas e aumentar o valor do carrinho:
+
 •	Implementar Recomendações de Produto Dinâmicas: Adicionar seções de "Comprado frequentemente junto" ou "Você também pode gostar" no carrinho de compras ou nas páginas dos produtos, com base nas combinações identificadas e na complementaridade funcional dos itens (ex: REGENCY CAKESTAND e seus complementos).
+
 •	Desenvolver Kits e Pacotes Promocionais: Criar e promover ativamente kits de produtos que se complementam, como "Kit Festa Regency" ou "Coleção Rosas para Chá", oferecendo um valor agregado ao cliente e incentivando compras maiores.
+
 •	Marketing Direcionado com Complementos: Utilizar os insights sobre as combinações de produtos em campanhas de e-mail marketing ou anúncios direcionados, oferecendo itens complementares aos clientes que já adquiriram um dos produtos da combinação, incentivando uma nova compra.
+
 Conclusão e Recomendações de Negócio Finais
+
 A análise exploratória do dataset 'Online Retail' revelou insights valiosos que podem guiar o e-commerce a estratégias mais eficientes, focadas em aumentar a receita e a rentabilidade. As principais descobertas podem ser sintetizadas em três áreas-chave: Clientes VIP, Sazonalidade das Vendas e Oportunidades de Venda Cruzada.
+
 Resumo das Descobertas
+
 •	Clientes VIP: A análise confirmou a validade da Regra de Pareto, mostrando que uma pequena porcentagem da base de clientes é responsável por uma parcela desproporcionalmente grande da receita. Clientes como o de ID 14646 demonstram um valor significativo, e sua identificação é crucial para qualquer estratégia de fidelização.
+
 •	Sazonalidade das Vendas: O comportamento de compra dos clientes apresenta uma flutuação sazonal bem definida. As vendas se mantêm em um nível mais baixo no início do ano (de janeiro a setembro) e aceleram significativamente no último trimestre (outubro a dezembro), impulsionadas por períodos festivos e de alto consumo de itens de casa, cozinha e festa.
+
 •	Oportunidades de Venda Cruzada: Foi possível identificar padrões de compra de produtos que se complementam. Em particular, a coleção REGENCY demonstra que clientes VIP buscam completar conjuntos (ex: REGENCY CAKESTAND 3 TIER comprado com REGENCY TEA PLATE ROSES e REGENCY TEAPOT ROSES). Por outro lado, itens como o PICNIC BASKET WICKER 60 PIECES se destacam como produtos de alto valor que, por si só, são motores de receita, sem a necessidade de venda cruzada.
+
 Recomendações Estratégicas e Planos de Ação
+
 Com base nas conclusões apresentadas, as seguintes recomendações estratégicas são propostas para otimizar as operações e impulsionar o crescimento do e-commerce:
+
 1.	Fidelização e Relacionamento com Clientes VIP:
+
 o	Implementar um Cadastro Robusto: É fundamental neutralizar a possibilidade de compras sem identificação do CustomerID. A obrigatoriedade de um cadastro, mesmo que simples e ágil, é essencial para o rastreamento do cliente, a construção de um relacionamento de longo prazo e a mensuração de satisfação (como o NPS).
+
 o	Criar um Programa de Fidelidade Exclusivo: Desenvolver programas de recompensas, ofertas personalizadas e atendimento prioritário para os Clientes VIP, com o objetivo de aumentar sua proximidade com a marca e a receita recorrente.
+
 o	Marketing Segmentado: Utilizar os perfis de compra (alta frequência vs. alto ticket médio) para criar campanhas publicitárias e comunicações direcionadas, aumentando o engajamento e a retenção.
+
 2.	Planejamento Sazonal Otimizado:
+
 o	Gestão de Estoque Proativa: Priorizar a disponibilidade dos produtos de alta demanda (como os itens de festa e cozinha) nos meses de pico (setembro a dezembro), garantindo que o estoque não se esgote e evitando perdas de vendas.
+
 o	Estratégias para a Baixa Temporada: Criar campanhas de marketing e promoções atrativas para os meses de menor movimento (janeiro a agosto) para estimular as vendas e suavizar a flutuação de receita ao longo do ano.
+
 3.	Aproveitamento da Venda Cruzada:
+
 o	Implementar Recomendações de Produto Dinâmicas: Adicionar ao carrinho de compras ou às páginas dos produtos sugestões como "Comprado frequentemente junto" ou "Você também pode gostar", baseadas nas combinações identificadas (ex: REGENCY CAKESTAND e seus complementos).
+
 o	Desenvolver Kits e Pacotes Promocionais: Criar e promover ativamente kits de produtos que se complementam, como "Kit Festa Regency" ou "Coleção Rosas para Chá", oferecendo um valor agregado ao cliente e incentivando compras maiores.
+
 o	Priorizar Produtos-Destino: Focar o marketing e as vendas do PICNIC BASKET como um item de alto valor por si só, garantindo que ele esteja sempre em destaque e com estoque adequado, dada sua capacidade de gerar receita individualmente.
 
 A aplicação desses insights, solidamente fundamentados na análise de dados, permitirá ao e-commerce operar de forma mais estratégica, transformando dados brutos em ações de negócio concretas para aumentar sua rentabilidade e solidificar a sua base de clientes.
