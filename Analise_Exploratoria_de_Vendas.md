@@ -52,7 +52,7 @@ SELECT COUNT(*) FROM online_retail_clean;
 
 ``` 
 
-![397millinhas](Print_397_mil_linhas.png)
+![397millinhas](Print397millinhas.png)
 
 Identificação dos Clientes VIP
 
@@ -95,7 +95,7 @@ LIMIT 10;
 
 ```
 
-![RankingClientes](Ranking_clientes.png)
+![RankingClientes](Rankingclientes.png)
 
 Os resultados desta análise confirmam de forma contundente nossa hipótese inicial e demonstram uma clara aderência ao Princípio de Pareto (ou Regra 80/20). Observamos que:
 
@@ -124,7 +124,7 @@ ORDER BY ValorTotalDeCompra DESC;
 
 ```
 
-![ClientesdemaiorReceita](número_de_compras_e_o_ticket_médio_dos_cinco_clientes_com_maior_receita.png)
+![ClientesdemaiorReceita](numerodecompraseoticketmediodoscincoclientescommaiorreceita.png)
 
 Essa análise revela dois perfis distintos entre os Clientes VIP:
 
@@ -199,7 +199,7 @@ ORDER BY
 
 ```
 
-![InvoiceDate](extraindo_mês_e_ano_da_InvoiceDate.png)
+![InvoiceDate](extraindomeseanodaInvoiceDate.png)
 
 Resultados e Análise da Sazonalidade:
 
@@ -268,7 +268,7 @@ ORDER BY
 
 ```
 
-![PaíseseMesesdemaiorlucratividade](meses_de_maior_e_menor_lucratividade.png)
+![PaíseseMesesdemaiorlucratividade](mesesdemaioremenorlucratividade.png)
 
 
 Para o Reino Unido, por exemplo, os meses mais rentáveis são Novembro, Setembro, Outubro, Dezembro e Junho. Em contraste, os meses com menor lucratividade incluem Agosto, Fevereiro, Janeiro, Outubro (do ano anterior) e Abril.
@@ -351,7 +351,7 @@ ORDER BY
 
 ```
 
-![ReceitaAltaTemporada](carro_chefe_de_produtos.png)
+![ReceitaAltaTemporada](carrochefedeprodutos.png)
 
 Resultados:
 
@@ -437,7 +437,7 @@ ORDER BY
 
 ```
 
-![VendasCruzadas](vendas_cruzadas.png)
+![VendasCruzadas](vendascruzadas.png)
 
 Resultados e Insights:
 
