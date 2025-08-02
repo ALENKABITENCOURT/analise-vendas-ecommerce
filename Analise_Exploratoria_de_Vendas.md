@@ -9,7 +9,7 @@ Para esta análise, utilizamos o dataset "Online Retail", acessado publicamente 
 Com o intuito de manter a clareza e facilitar o acesso, uma estrutura de pastas foi estabelecida:
 * A pasta `data/` armazena os dados brutos (`data/raw`, contendo o `OnlineRetail.csv`) e os dados processados (`data/processed`).
 * Na `sql/`, encontram-se todas as consultas e análises desenvolvidas em SQL.
-* A `power_bi/` é dedicada à criação de painéis e visualizações no Power BI.
+* O `looker/` é dedicado à criação de painéis e visualizações no Power BI.
 * Uma nota: a pasta `python/` foi inicialmente planejada, mas a priorização da análise em SQL levou à sua remoção para otimizar o foco do projeto.
 
 Todo o trabalho está documentado no GitHub (`https://github.com/ALENKABITENCOURT/analise-vendas-ecommerce.git`), o que permite acompanhar cada alteração e assegurar a visibilidade das pastas (inclusive com o uso de arquivos `.gitkeep` em diretórios que, de outra forma, ficariam vazios).
