@@ -5,7 +5,7 @@ Análise exploratória de dados transacionais de um e-commerce para identificar 
 ## 🛠️ Ferramentas
 
 * **SQL:** Limpeza e análise de dados.
-* **Power BI:** Visualização e dashboard interativo.
+* **Looker:** Visualização e dashboard interativo.
 
 ## 🔍 A Análise Completa
 
